@@ -1,6 +1,6 @@
-Thanks for downloading this theme!
+Landing page
 
-Theme Name: Day
-Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-Author: BootstrapMade
-Author URL: https://bootstrapmade.com
+-- Explore Blitar --
+
+Sebuah web yang menunjukkan wisata yang ada di Blitar meliputi wisata sejarah, alam, rekreasi dan alam 
+
