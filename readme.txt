@@ -1,4 +1,5 @@
-Landing page
+Theme Name: Day
+Title : Explore Blitar
 
 -- Explore Blitar --
 
