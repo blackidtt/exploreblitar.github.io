@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Explore Blitar</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <style type="text/css">
+    .btn:hover {
+  background-color: #4169E1;
+  border-color:#f2f2f2;
+  color:#fff;  
+}
+  </style>
+  <!-- =======================================================
+    Theme Name: Day
+    Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <header id="header">
+    <nav class="navbar navbar-default navbar-static-top backig " role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <div class="navbar-brand">
+            <a href="index.html"><h1>Explore Blitar</h1></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a href="index.html">Home</a></li>
+              <li role="presentation"><a href="budaya.html">Budaya</a></li>
+              <li role="presentation"><a href="kuliner.html">Kuliner</a></li>
+              <li role="presentation"><a href="destinasi.html">Destinasi</a></li>
+              <li role="presentation"><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+  </header>
+  <!--/header-->
+  <section class="contact-page">
+    <div class="container">
+      <div class="text-center">
+        <h2>Tinggalkan Pesanmu</h2><br>
+      </div>
+      <div class="row contact-wrap">
+        <div class="col-md-6 col-md-offset-3">
+          <form action="" method="post" role="form" class="contactForm" name="form1" onsubmit="cekForm()">
+            <div class="form-group">
+              <input type="text" class="form-control" id="nama" placeholder="Nama"/>
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control"id="subjek" placeholder="Subjek" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Pesan" id="pesan" rows="5"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit</button></div>
+          </form>
+        </div>
+      </div>
+      <!--/.row-->
+    </div>
+    <!--/.container-->
+  </section>
+  <!--/#contact-page-->
+
+
+  <footer class="backig">
+    <div class="container">
+      <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <h4>Kontak</h4>
+        <div class="contact-info">
+          <ul>
+            <li><i class="fa fa-home fa"></i> Jalan Wisanggeni Blok G-87, 66117, Kota Blitar</li>
+            <li><i class="fa fa-phone fa"></i> +62 895 497 207 08</li>
+            <li><i class="fa fa-envelope fa"></i> maftuhpistol@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="410" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=jalan%20wisanggeni%20blitar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:285px;width:470px;}.gmap_canvas {overflow:hidden;background:none!important;height:285px;width:470px;}</style></div>
+    </div>
+  </footer>
+
+  <div class="sub-footer">
+    <div class="container">
+        <div class="copyright">
+          &copy; Explore Blitar theme. All Rights Reserved.
+        </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    wow = new WOW({}).init();
+  </script>
+  <script type="text/javascript">
+    function cekForm(){
+      var validasiHuruf = /^[a-zA-Z ]+$/;
+      var nama = document.getElementById("nama").value;
+      var email = document.getElementById("email").value;
+      var subjek = document.getElementById("subjek").value;
+      var pesan = document.getElementById("pesan").value;
+
+      if(nama == ""){
+        swal({
+          title: "Gagal!",
+          text: "Nama masih belum diisi",
+          icon: "error",
+          button: "Back!",
+        });
+        nama.focus();
+      }else if (!nama.match(validasiHuruf)) {
+        swal({
+          title: "Gagal!",
+          text: "Nama harus berupa huruf",
+          icon: "error",
+          button: "Back!",
+        });
+        nama.focus();
+      }else if(email == ""){
+        swal({
+          title: "Gagal!",
+          text: "Email masih belum diisi",
+          icon: "error",
+          button: "Back!",
+        });
+        email.focus();
+      }else if(subjek == ""){
+        swal({
+          title: "Gagal!",
+          text: "Subjek masih belum diisi",
+          icon: "error",
+          button: "Back!",
+        });
+        subjek.focus();
+      }else if(pesan == ""){
+        swal({
+          title: "Gagal!",
+          text: "Pesan masih belum diisi",
+          icon: "error",
+          button: "Back!",
+        });
+        pesan.focus();
+      }else{
+        swal("Selamat!", "Pesan telah tersampaikan!", "success");
+        document.form1.submit();
+        document.form1.reset();
+      }
+    }
+  </script>
+  <script src="contactform/contactform.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+</body>
+
+</html>
