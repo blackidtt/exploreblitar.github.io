@@ -1,5 +1,6 @@
 Theme Name: Day
 Title : Explore Blitar
+Demo : https://blackidtt.github.io/exploreblitar.github.io/
 
 -- Explore Blitar --
 
