@@ -1,11 +1,11 @@
-const divInstall = document.getElementById("installContainer");
-const butInstall = document.getElementById("butInstall");
+// const divInstall = document.getElementById("installContainer");
+// const butInstall = document.getElementById("butInstall");
 
 /* Put code here */
 
 /* Only register a service worker if it's supported */
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/template/explore/service-worker.js");
+  navigator.serviceWorker.register("/exploreblitar.github.io/service-worker.js");
 }
 
 /**
