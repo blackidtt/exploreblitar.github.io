@@ -33,14 +33,14 @@ var scanner = new Instascan.Scanner({ video: document.getElementById('preview'),
       if(cameras.length>0){
           scanner.start(cameras[0]);
           $('[name="options"]').on('change',function(){
-              if($(this).val()==1){
+              if($('[name="options"]').val()==1){
                 alert("p1");
                   if(cameras[0]!=""){
                       scanner.start(cameras[0]);
                   }else{
                       alert('No Front camera found!');
                   }
-              }else if($(this).val()==2){
+              }else if($('[name="options"]').val()==2){
                 alert("p2");
                   if(cameras[1]!=""){
                       scanner.start(cameras[1]);
